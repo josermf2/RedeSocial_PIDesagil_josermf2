@@ -17,8 +17,7 @@ public class Usuario {
 	}
 	
 	public void postaVideo(int id, Produto produto) {
-		Video video = new Video(id, this, produto);
-		videos.add(video);
+		videos.add(new Video(id, this, produto));
 	}
 	
 	public double totalAvaliacoes() {
