@@ -16,8 +16,10 @@ public class Usuario {
 		return nome;
 	}
 	
-	public void postaVideo(int id, Produto produto) {
-		videos.add(new Video(id, this, produto));
+	public Video postaVideo(int id, Produto produto) {
+		Video video = new Video(id, this, produto);
+		videos.add(video);
+		return video;
 	}
 	
 	public double totalAvaliacoes() {
@@ -25,7 +27,7 @@ public class Usuario {
 		for (Video video : videos) {
 			total += video.mediaAvaliacoes();
 		}
-		return Math.round(total);
+		return total;
 	}
 	
 }

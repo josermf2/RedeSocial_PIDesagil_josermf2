@@ -36,18 +36,23 @@ public class Video {
 			}
 		}
 		if(naoPostou){
-			if(i >= 1 && i <=5) {
+			if(i >= 1 && i <= 5) {
 				this.avaliacoes.put(usuario.getNome(), i);
 			}
 		}	
 	}
 	
 	public int mediaAvaliacoes() {
-		int total = 0;
+		double total = 0;
 		for(String u : this.avaliacoes.keySet()) {
-			total += Math.round(this.avaliacoes.get(u));
+			total += this.avaliacoes.get(u);
 		}
 		
-		return total;
+		if (this.avaliacoes.keySet().size() > 0) {
+			double media = total/(this.avaliacoes.keySet().size());
+			return (int) Math.round(media);
+		}
+		
+		return 0;	
 	}
 }
