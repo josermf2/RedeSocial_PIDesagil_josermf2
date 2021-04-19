@@ -1,1 +1,4 @@
-# RedeSocial_PIDesagil_josermf2
+# RedeSocial - Prova Intermediária - Desenvolvimento Colaborativo Ágil
+
+## Aluno: 
+* José Rafael Martins Fernandes
